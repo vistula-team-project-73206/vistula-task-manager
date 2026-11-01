@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager | My Digital Planner</title>
+
+    <!-- Our website's styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Welcome section -->
+        <header class="header">
+            <p class="welcome-text">MY LITTLE PRODUCTIVITY SPACE 🌸</p>
+
+            <h1>Task Manager</h1>
+
+            <p class="subtitle">Small steps, big progress.</p>
+
+            <p class="student-info">
+                Vistula Student ID:
+                <span id="student-id">73206</span>
+            </p>
+        </header>
+
+
+        <!-- Dashboard statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>📋 Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>⏳ Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>✅ Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Progress tracker -->
+        <section class="progress-section">
+
+            <h2>Your Progress 💜</h2>
+
+            <p id="progress-message">
+                Every little step counts!
+            </p>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <p id="progress-percentage">0% completed</p>
+
+        </section>
+
+
+        <!-- Add and edit tasks -->
+        <section class="task-form-section">
+
+            <h2>What's on your mind today? 🌷</h2>
+
+            <form id="task-form">
+
+                <label for="task-title">Task Title</label>
+
+                <input
+                    type="text"
+                    id="task-title"
+                    placeholder="e.g. Finish my Java assignment"
+                    required
+                >
+
+                <label for="task-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="task-description"
+                    placeholder="Add a little more detail..."
+                    rows="3"
+                ></textarea>
+
+                <button type="submit" id="task-submit">
+                    + Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Task list -->
+        <section class="tasks-section">
+
+            <h2>My Tasks 📝</h2>
+
+            <div class="filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+            <!-- JavaScript will display saved tasks here -->
+            <div id="task-list">
+
+                <p class="empty-message">
+                    No tasks yet. Let's add your first one! 🌸
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Messages and errors -->
+        <p id="status-message" role="status" aria-live="polite"></p>
+
+
+        <!-- Team collaboration page -->
+        <footer>
+
+            <p>Made with 💜 and a little motivation.</p>
+
+            <a
+                href="contribution.html"
+                id="contribution-link"
+            >
+                View Team Contribution
+            </a>
+
+        </footer>
+
+    </div>
+
+    <!-- Our JavaScript functionality -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
